@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap');
+
+
+.check{
+    border: 2px solid rgb(255, 255, 255);
+    /* background-color: black; */
+}
+
+
+.Theme {
+    background-color: black;
+    /* color: white; */
+}
+.text-color{
+    color: white;
+}
+.SearchBtn{
+    color: white;
+    outline: 2px solid white;
+}
+.SearchBtn:hover{
+    color: rgb(231, 231, 231);
+}
+.nav-link:hover{
+color: white ;
+border-bottom: 1px solid white;
+
+}
+.navbar-brand:hover{
+    color: rgb(211, 211, 211);
+}
+#loginBtn, #SignupBtn{
+    cursor: pointer;
+}
+
+/* ---------------------------------HOME PAGE------------- */
+.sectionImage{
+    width: 100%;
+    height: 80vh;
+    background-image: url(./Assets/HomePageImage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* opacity: 70%; */
+}
+body{
+    overflow-x: hidden;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------LOGIN PAGE------- */
+
+.loginSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LoginDiv{
+    width: 410px;
+    padding: 10px;
+    height: 80vh;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+.Fstyle{
+    font-family: 'Dancing Script', cursive;
+}
+.lStyle{
+    font-family: 'Pacifico', cursive;
+}
+.backgroundImage{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 60%;
+    z-index: -1;
+}
+
+
+/* --------------------------AboutPage ----------------*/
+.backgroundImageAbout{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* opacity: 60%; */
+    z-index: -1;
+}
+.AboutFooter{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+.AboutContentDiv{
+    height: 80vh;
+    width: 60vw;
+    padding: 50px;
+}
+.AboutContentDiv h1{
+    font-family: 'Pacifico', cursive;
+    border-bottom: 1px solid white;
+}
+.AboutContentDiv p{
+    margin-top: 15px;
+    font-size: large;
+    font-style: italic;
+}
+.WaitingDiv h2{
+    font-family:'Pacifico', cursive;
+}
+.WaitingDiv h4{
+    font-family: 'Dancing Script', cursive;
+}
+
+
+/* -----------------------Contact Page --------------------------*/
+.backgroundImageContact{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 60%;
+    z-index: -1;
+}
+.ContactContentDiv{
+    height: 80vh;
+    width: 60vw;
+    padding: 50px;
+}
+.ContactContentDiv h1{
+    font-family: 'Pacifico', cursive;
+    border-bottom: 1px solid white;
+}
+.ContactContentDiv p{
+    margin-top: 15px;
+    font-size: large;
+    font-style: italic;
+}
+.ContactContentDiv li{
+    color: white;
+}
+.ContactContentDiv li a{
+    color: white;
+    text-decoration: none;
+    
+}
+.ContactContentDiv li a:hover{
+    border-bottom: 1px solid white;
+    
+}
+.ContactContentDiv h3{
+    font-family: 'Dancing Script', cursive;
+    border-bottom: 1px solid white;
+}
+
+
+
+
+/* ---------------------FOOTER------------------  */
+footer{
+    background-color: black;
+    
+}
+.SocialMedia{
+    display: flex;
+    justify-content: center;
+    
+}
+.SocialMedia li{
+    list-style: none;
+    margin: 0px 10px;
+
+}
+.SocialMedia li a{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+.footerText{
+    color: white;
+    font-weight: bold;
+}
+::-webkit-scrollbar {
+    width: 6px;
+  }
+::-webkit-scrollbar-track{
+        background: black;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(122, 122, 122);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+
+
+
+
+  @media screen and (max-width:556px) {
+    .AboutContentDiv{
+        width: 90vw;
+    }
+  }

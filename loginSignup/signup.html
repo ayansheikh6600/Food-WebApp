@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg Theme">
+    <div class="container-fluid">
+
+      <a class="navbar-brand text-color fs-3 fw-bold" href="#">Food App</a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-5">
+          <li class="nav-item ms-lg-4 ">
+            <a class="nav-link text-color" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link text-color" href="#">About</a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link text-color" href="#">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link text-color" href="#">Menu</a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link text-color" href="#">Signup/Login</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn SearchBtn" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <img class="backgroundImage" src="../Assets/background.jpg" alt="">
+
+  <section class=" loginSection">
+    <div class="LoginDiv">
+      <h1 class="text-center Fstyle">WELCOME</h1>
+      <hr>
+      <h3 class="text-center lStyle">Signup</h3>
+      <label for="" class="mt-3 fw-bold" >FULLNAME:</label>
+      <input class="form-control" type="text" id="Name">
+      <label for="" class="mt-3 fw-bold">PHONE NO:</label>
+      <input class="form-control" type="text" id="Phone">
+      <label for="" class="mt-3 fw-bold">EMAIL:</label>
+      <input class="form-control" type="email" id="Email">
+      <label for="" class="mt-3 fw-bold">Password:</label>
+      <input class="form-control" type="password" id="Password">
+      <label for="" class="mt-3 fw-bold">Select Account Type:</label>
+      <select class="form-select" id="userType" aria-label="Default select example">
+        <option selected disabled>Select User Type</option>
+        <option value="Vendor">Vendor</option>
+        <option value="Customer">Customer</option>
+      </select>
+      <p>Already Have An Account? <span id="loginBtn" class="fw-bold">Login</span></p>
+      <button class="btn btn-dark" id="SignupBtn">Signup</button>
+    </div>
+  </section>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script type="module" src="signup.js"></script>
+
+</html>
