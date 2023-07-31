@@ -19,6 +19,9 @@ window.addEventListener("load", CheckLogin)
 function CheckLogin(){
   const CheckData = JSON.parse(localStorage.getItem("user"))
   console.log(CheckData)
+  if(CheckData == null){
+    return
+  }
   if(CheckData.UserType == "Customer"){
     window.location.replace("../customer/customer.html")
   }else if(CheckData.UserType == "Vendor" && CheckData.Status == true){

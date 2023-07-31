@@ -1,40 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap');
 
 
-.check{
+.check {
     border: 2px solid rgb(255, 255, 255);
     /* background-color: black; */
 }
+
+.checkB {
+    border: 2px solid rgb(0, 0, 0);
+    /* background-color: black; */
+}
+
 
 
 .Theme {
     background-color: black;
     /* color: white; */
 }
-.text-color{
+
+.text-color {
     color: white;
 }
-.SearchBtn{
+
+.SearchBtn {
     color: white;
     outline: 2px solid white;
 }
-.SearchBtn:hover{
+
+.SearchBtn:hover {
     color: rgb(231, 231, 231);
 }
-.nav-link:hover{
-color: white ;
-border-bottom: 1px solid white;
+
+.nav-link:hover {
+    color: white;
+    border-bottom: 1px solid white;
 
 }
-.navbar-brand:hover{
+
+.navbar-brand:hover {
     color: rgb(211, 211, 211);
 }
-#loginBtn, #SignupBtn{
+
+#loginBtn,
+#SignupBtn {
     cursor: pointer;
 }
 
 /* ---------------------------------HOME PAGE------------- */
-.sectionImage{
+.sectionImage {
     width: 100%;
     height: 80vh;
     background-image: url(./Assets/HomePageImage.jpg);
@@ -42,9 +55,10 @@ border-bottom: 1px solid white;
     background-repeat: no-repeat;
     /* opacity: 70%; */
 }
-body{
+
+body {
     overflow-x: hidden;
-    
+
 }
 
 
@@ -70,26 +84,31 @@ body{
 
 /* -----------------LOGIN PAGE------- */
 
-.loginSection{
+.loginSection {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.LoginDiv{
+
+.LoginDiv {
     width: 410px;
     padding: 10px;
     height: 80vh;
     margin-top: 15px;
     background-color: white;
     border-radius: 10px;
+    overflow-y: scroll;
 }
-.Fstyle{
+
+.Fstyle {
     font-family: 'Dancing Script', cursive;
 }
-.lStyle{
+
+.lStyle {
     font-family: 'Pacifico', cursive;
 }
-.backgroundImage{
+
+.backgroundImage {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -99,118 +118,182 @@ body{
 
 
 /* --------------------------AboutPage ----------------*/
-.backgroundImageAbout{
+.backgroundImageAbout {
     width: 100%;
     height: 100%;
     position: fixed;
     /* opacity: 60%; */
     z-index: -1;
 }
-.AboutFooter{
+
+.AboutFooter {
     width: 100%;
     position: absolute;
     bottom: 0px;
 }
-.AboutContentDiv{
+
+.AboutContentDiv {
     height: 80vh;
     width: 60vw;
     padding: 50px;
 }
-.AboutContentDiv h1{
+
+.AboutContentDiv h1 {
     font-family: 'Pacifico', cursive;
     border-bottom: 1px solid white;
 }
-.AboutContentDiv p{
+
+.AboutContentDiv p {
     margin-top: 15px;
     font-size: large;
     font-style: italic;
 }
-.WaitingDiv h2{
-    font-family:'Pacifico', cursive;
+
+.WaitingDiv h2 {
+    font-family: 'Pacifico', cursive;
 }
-.WaitingDiv h4{
+
+.WaitingDiv h4 {
     font-family: 'Dancing Script', cursive;
 }
 
 
 /* -----------------------Contact Page --------------------------*/
-.backgroundImageContact{
+.backgroundImageContact {
     width: 100%;
     height: 100%;
     position: fixed;
     opacity: 60%;
     z-index: -1;
 }
-.ContactContentDiv{
+
+.ContactContentDiv {
     height: 80vh;
     width: 60vw;
     padding: 50px;
 }
-.ContactContentDiv h1{
+
+.ContactContentDiv h1 {
     font-family: 'Pacifico', cursive;
     border-bottom: 1px solid white;
 }
-.ContactContentDiv p{
+
+.ContactContentDiv p {
     margin-top: 15px;
     font-size: large;
     font-style: italic;
 }
-.ContactContentDiv li{
+
+.ContactContentDiv li {
     color: white;
 }
-.ContactContentDiv li a{
+
+.ContactContentDiv li a {
     color: white;
     text-decoration: none;
-    
+
 }
-.ContactContentDiv li a:hover{
+
+.ContactContentDiv li a:hover {
     border-bottom: 1px solid white;
-    
+
 }
-.ContactContentDiv h3{
+
+.ContactContentDiv h3 {
     font-family: 'Dancing Script', cursive;
     border-bottom: 1px solid white;
 }
 
+/* -----------------------Seller Page-----------------------  */
+.sellerNavbar {
+    width: 100%;
+    justify-content: center;
+}
+
+.sellerNavbarMain {
+    border-bottom: 1px dashed white;
+}
+
+.ProfileDiv {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    border: 2px solid black;
+
+}
+
+.ResponseDiv {
+    text-align: start;
+}
+
+.ProfileInformation h1{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
 
 
+
+
+
+.ProfileImageDiv {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    /* justify-content: center; */
+}
+
+.ProfileImageDiv img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin: 0px auto;
+}
 
 /* ---------------------FOOTER------------------  */
-footer{
+footer {
     background-color: black;
-    
+
 }
-.SocialMedia{
+
+.SocialMedia {
     display: flex;
     justify-content: center;
-    
+
 }
-.SocialMedia li{
+
+.SocialMedia li {
     list-style: none;
     margin: 0px 10px;
 
 }
-.SocialMedia li a{
+
+.SocialMedia li a {
     font-size: 25px;
     color: white;
     text-decoration: none;
 }
-.footerText{
+
+.footerText {
     color: white;
     font-weight: bold;
 }
+
 ::-webkit-scrollbar {
     width: 6px;
-  }
-::-webkit-scrollbar-track{
-        background: black;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
     background: rgb(122, 122, 122);
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+}
 
 
 
@@ -218,8 +301,8 @@ footer{
 
 
 
-  @media screen and (max-width:556px) {
-    .AboutContentDiv{
+@media screen and (max-width:556px) {
+    .AboutContentDiv {
         width: 90vw;
     }
-  }
+}
