@@ -250,7 +250,9 @@ body {
     margin: 0px auto;
     border: 3px solid black;
 }
-
+a:focus{
+   color: white !important;
+}
 /* ---------------------FOOTER------------------  */
 footer {
     background-color: black;

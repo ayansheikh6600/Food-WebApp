@@ -1,6 +1,6 @@
 import { db, analytics, auth, app } from "../firebase.js"
 import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import { getAuth,signOut, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import { getStorage, deleteObject, ref, uploadBytes, uploadString, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js";
 
 const storage = getStorage();
@@ -15,6 +15,7 @@ const RestaurantAddress = document.getElementById("RestaurantAddress")
 const Name = document.getElementById("Name")
 const UserPhoneNO = document.getElementById("UserPhoneNO")
 const UserEmail = document.getElementById("UserEmail")
+const LogoutBtn = document.getElementById("LogoutBtn")
 
 window.addEventListener("load", getUserData)
 
@@ -32,4 +33,17 @@ RestaurantNameInput.value = UserData.Restaurant.RName
 RestaurantPhone.value = UserData.Restaurant.RPhone
 RestaurantEmail.value = UserData.Restaurant.REmail
 RestaurantAddress.value = UserData.Restaurant.RAddress    
+}
+
+
+LogoutBtn.addEventListener("click", LogoutUser)
+
+async function LogoutUser(){
+    signOut(auth).then(() => {
+        localStorage.clear()
+        window.location.replace("../index.html")
+        // Sign-out successful.
+      }).catch((error) => {
+        // An error happened.
+      });
 }
