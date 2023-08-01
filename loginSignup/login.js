@@ -16,19 +16,36 @@ LoginBtn.addEventListener("click", login)
 
 window.addEventListener("load", CheckLogin)
 
-function CheckLogin(){
+async function CheckLogin() {
   const CheckData = JSON.parse(localStorage.getItem("user"))
   console.log(CheckData)
-  if(CheckData == null){
+  if (CheckData == null) {
     return
   }
-  if(CheckData.UserType == "Customer"){
-    window.location.replace("../customer/customer.html")
-  }else if(CheckData.UserType == "Vendor" && CheckData.Status == true){
-    window.location.replace("../seller/seller.html")
-  }else if(CheckData.UserType == "Vendor"){
-    window.location.replace("../customer/waiting.html")
+  const docRef = doc(db, "users", CheckData.UserUID);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    console.log("Document data:", docSnap.data());
+    const UserData = docSnap.data()
+    
+    if (UserData.UserType == "Customer") {
+      window.location.replace("../customer/customer.html")
+    } else if (UserData.UserType == "Vendor" && UserData.Status == true) {
+      window.location.replace("../seller/seller.html")
+    } else if (UserData.UserType == "Vendor") {
+      window.location.replace("../customer/waiting.html")
+    }
+
+
+  } else {
+    // docSnap.data() will be undefined in this case
+    console.log("No such document!");
   }
+
+
+  console.log(CheckData)
+  
 }
 
 
@@ -53,11 +70,11 @@ async function login() {
         console.log("Document data:", docSnap.data());
         const userData = docSnap.data()
         localStorage.setItem("user", JSON.stringify(userData))
-        if(userData.UserType == "Customer"){
+        if (userData.UserType == "Customer") {
           window.location.replace("../customer/customer.html")
-        }else if(userData.UserType == "Vendor" && userData.Status == true){
+        } else if (userData.UserType == "Vendor" && userData.Status == true) {
           window.location.replace("../seller/seller.html")
-        }else if(userData.UserType == "Vendor"){
+        } else if (userData.UserType == "Vendor") {
           window.location.replace("../customer/waiting.html")
         }
       } else {

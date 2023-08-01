@@ -22,9 +22,9 @@ async function RestaurantsSubmintBtn(){
     const userUID = UserData.UserUID
     console.log(userUID)
     const RName = RestaurantsName.value
-    const RPhone = RestaurantsAddress.value
+    const RPhone = RestaurantsPhone.value
     const REmail = RestaurantsEmail.value
-    const RAddress = RestaurantsPhone.value
+    const RAddress = RestaurantsAddress.value
 
 
     // return
