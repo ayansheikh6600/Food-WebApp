@@ -39,7 +39,7 @@
             <a class="nav-link text-color" href="#">Signup/Login</a>
           </li>
         </ul>
-        <button id="LogoutBtn" class="btn SearchBtn" >Logout</button>
+        <button id="LogoutBtn" class="btn SearchBtn">Logout</button>
       </div>
     </div>
   </nav>
@@ -53,19 +53,19 @@
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 sellerNavbar">
           <li class="nav-item ms-lg-4 ">
-            <a class="nav-link text-color" aria-current="page" href="#">Profile</a>
+            <a class="nav-link text-color" aria-current="page" id="ProfileBtn">Profile</a>
           </li>
           <li class="nav-item ms-lg-1">
-            <a class="nav-link text-color" href="#">Listed Product</a>
+            <a class="nav-link text-color" id="ListedProductBtn">Listed Product</a>
           </li>
           <li class="nav-item ms-lg-1">
-            <a class="nav-link text-color" href="#">Active Order</a>
+            <a class="nav-link text-color" id="ActiveOrderBtn">Active Order</a>
           </li>
           <li class="nav-item ms-lg-1">
-            <a class="nav-link text-color" href="#">Complete Order</a>
+            <a class="nav-link text-color" id="CompleteOrderBtn">Complete Order</a>
           </li>
         </ul>
-        
+
       </div>
     </div>
   </nav>
@@ -99,28 +99,48 @@
         </div>
       </div>
       <div class="col-lg-8">
-        <div class="ProfileInformation">
-          <h1>Profile Information</h1>
-          <div>
-            <label class="fw-bold mt-2" for="">FULLNAME:</label>
-            <input id="Name" class="form-control" type="text" disabled>
-            <label class="fw-bold mt-2" for="">Phone No:</label>
-            <input id="UserPhoneNO" class="form-control" type="text" disabled>
-            <label class="fw-bold mt-2" for="">Email:</label>
-            <input id="UserEmail" class="form-control" type="text" disabled>
+        <div id="ChangingContentDiv">
+          <div class="ProfileInformation">
+            <h1>Profile Information</h1>
+            <div>
+              <label class="fw-bold mt-2" for="">FULLNAME:</label>
+              <input id="Name" class="form-control" type="text" disabled>
+              <label class="fw-bold mt-2" for="">Phone No:</label>
+              <input id="UserPhoneNO" class="form-control" type="text" disabled>
+              <label class="fw-bold mt-2" for="">Email:</label>
+              <input id="UserEmail" class="form-control" type="text" disabled>
+            </div>
+            <h1>Restaurant Information</h1>
+            <div>
+              <label class="fw-bold mt-2" for="">Restaurant Name:</label>
+              <input id="RestaurantNameInput" class="form-control" type="text" disabled>
+              <label class="fw-bold mt-2" for="">Restaurant Phone No:</label>
+              <input id="RestaurantPhone" class="form-control" type="text" disabled>
+              <label class="fw-bold mt-2" for="">Restaurant Email:</label>
+              <input id="RestaurantEmail" class="form-control" type="text" disabled>
+              <label class="fw-bold mt-2" for="">Restaurant Address:</label>
+              <input id="RestaurantAddress" class="form-control mb-3" type="text" disabled>
+            </div>
           </div>
-          <h1>Restaurant Information</h1>
-          <div>
-            <label class="fw-bold mt-2" for="">Restaurant Name:</label>
-            <input id="RestaurantNameInput" class="form-control" type="text" disabled>
-            <label class="fw-bold mt-2" for="">Restaurant Phone No:</label>
-            <input id="RestaurantPhone" class="form-control" type="text" disabled>
-            <label class="fw-bold mt-2" for="">Restaurant Email:</label>
-            <input id="RestaurantEmail" class="form-control" type="text" disabled>
-            <label class="fw-bold mt-2" for="">Restaurant Address:</label>
-            <input id="RestaurantAddress" class="form-control mb-3" type="text" disabled>
+          <div class="ListedProductDiv">
+            <h2>Product List</h2>
+            <div class="d-flex justify-content-between align-items-center">
+              <h4>List A Product:</h4>
+              <button class="btn btn-dark ListInputShow">List Product</button>
+            </div>
+            <hr>
+            <div id="ProductInfoDiv">
+              <label class="mt-2 fw-bold">Product Name:</label>
+              <input class="form-control" type="text" placeholder="Product Name">
+              <label class="mt-2 fw-bold">Product Price:</label>
+              <input class="form-control" type="text" placeholder="Product Name">
+              <label class="mt-2 fw-bold">Product Picture:(size: 200 x 200)px</label>
+              <input class="form-control" type="file" placeholder="Product Name">
+              <button style="width: 70px;" class="btn btn-dark mt-3 mb-2">List</button>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -129,6 +149,6 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script type="module" src="seller.js"></script>
+<script type="module" src="seller.js"></script>
 
 </html>

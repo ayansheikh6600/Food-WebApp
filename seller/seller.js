@@ -16,6 +16,35 @@ const Name = document.getElementById("Name")
 const UserPhoneNO = document.getElementById("UserPhoneNO")
 const UserEmail = document.getElementById("UserEmail")
 const LogoutBtn = document.getElementById("LogoutBtn")
+const ChangingContentDiv = document.getElementById("ChangingContentDiv")
+const ProfileBtn = document.getElementById("ProfileBtn")
+const ListedProductBtn = document.getElementById("ListedProductBtn")
+const ActiveOrderBtn = document.getElementById("ActiveOrderBtn")
+const CompleteOrderBtn = document.getElementById("CompleteOrderBtn")
+const ProductInfoDiv = document.getElementById("ProductInfoDiv")
+const ProfileInformation = document.querySelector(".ProfileInformation")
+const ListedProductDiv = document.querySelector(".ListedProductDiv")
+const ListInputShow = document.querySelector(".ListInputShow")
+
+ProfileBtn.addEventListener("click",function(){
+  ListedProductDiv.style.display = "none"
+  ProfileInformation.style.display = "block"
+})
+ListInputShow.addEventListener("click",function(){
+  ProductInfoDiv.style.display = "block"
+})
+ListedProductBtn.addEventListener("click",function(){
+  ProfileInformation.style.display = "none"
+  ListedProductDiv.style.display = "block"
+})
+ActiveOrderBtn.addEventListener("click",function(){
+
+})
+CompleteOrderBtn.addEventListener("click",function(){
+
+})
+
+
 
 window.addEventListener("load", getUserData)
 

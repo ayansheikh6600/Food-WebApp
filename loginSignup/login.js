@@ -9,7 +9,7 @@ const Password = document.getElementById("Password")
 const LoginBtn = document.getElementById("LoginBtn")
 
 
-
+console.log(LoginBtn.innerText)
 
 SignupBtn.addEventListener("click", SignupPage)
 LoginBtn.addEventListener("click", login)
@@ -56,6 +56,9 @@ async function login() {
     alert("hiii")
     return
   }
+  LoginBtn.innerHTML = `<div class="spinner-border text-light" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>`
   await signInWithEmailAndPassword(auth, Email.value, Password.value)
     .then(async (userCredential) => {
       // Signed in 
@@ -84,8 +87,11 @@ async function login() {
       // ...
     })
     .catch((error) => {
+      LoginBtn.innerHTML = "Login"
       const errorCode = error.code;
       const errorMessage = error.message;
+
+      alert("Invalid Email & Password")
     });
 }
 
