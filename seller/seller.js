@@ -26,6 +26,7 @@ const ProfileInformation = document.querySelector(".ProfileInformation")
 const ListedProductDiv = document.querySelector(".ListedProductDiv")
 const ListInputShow = document.querySelector(".ListInputShow")
 
+
 ProfileBtn.addEventListener("click",function(){
   ListedProductDiv.style.display = "none"
   ProfileInformation.style.display = "block"
@@ -43,6 +44,7 @@ ActiveOrderBtn.addEventListener("click",function(){
 CompleteOrderBtn.addEventListener("click",function(){
 
 })
+
 
 
 

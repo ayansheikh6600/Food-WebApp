@@ -28,8 +28,10 @@ async function CheckLogin() {
   if (docSnap.exists()) {
     console.log("Document data:", docSnap.data());
     const UserData = docSnap.data()
-    
-    if (UserData.UserType == "Customer") {
+
+    if(UserData.UserType == "Admin"){
+      window.location.replace("../admin/admin.html")
+    }else if (UserData.UserType == "Customer") {
       window.location.replace("../customer/customer.html")
     } else if (UserData.UserType == "Vendor" && UserData.Status == true) {
       window.location.replace("../seller/seller.html")
@@ -73,7 +75,9 @@ async function login() {
         console.log("Document data:", docSnap.data());
         const userData = docSnap.data()
         localStorage.setItem("user", JSON.stringify(userData))
-        if (userData.UserType == "Customer") {
+        if(userData.UserType == "Admin"){
+          window.location.replace("../admin/admin.html")
+        }else if (userData.UserType == "Customer") {
           window.location.replace("../customer/customer.html")
         } else if (userData.UserType == "Vendor" && userData.Status == true) {
           window.location.replace("../seller/seller.html")

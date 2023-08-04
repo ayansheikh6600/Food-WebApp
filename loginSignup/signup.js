@@ -92,13 +92,14 @@ async function Signup(){
     }
     console.log(userOBJ)
     await setDoc(doc(db, "users", user.uid), userOBJ);
-    localStorage.setItem("user", JSON.stringify(userOBJ))
+    // localStorage.setItem("user", JSON.stringify(userOBJ))
+    window.location.replace("./login.html")
 
-    if(userType.value == "Vendor"){
-        window.location.replace("../seller/restaurant.html")
-    }else if(userType.value == "Customer"){
-        window.location.replace("../customer/customer.html")
-    }
+    // if(userType.value == "Vendor"){
+    //     window.location.replace("../seller/restaurant.html")
+    // }else if(userType.value == "Customer"){
+    //     window.location.replace("../customer/customer.html")
+    // }
 
 
 
