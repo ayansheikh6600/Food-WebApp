@@ -38,6 +38,10 @@ async function Signup(){
       console.log("No file selected.");
       return;
     }
+
+    SignupBtn.innerHTML = `<div class="spinner-border text-light" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>`
   
     console.log("File:", file);
   
@@ -107,6 +111,7 @@ async function Signup(){
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      SignupBtn.innerHTML = "Signup"
       // ..
     });
           
