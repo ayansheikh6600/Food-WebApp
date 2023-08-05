@@ -7,19 +7,23 @@ const RestaurantsAddress = document.getElementById("RestaurantsAddress")
 const RestaurantsEmail = document.getElementById("RestaurantsEmail")
 const RestaurantsPhone = document.getElementById("RestaurantsPhone")
 const RestaurantsSubmint = document.getElementById("RestaurantsSubmint")
-
 RestaurantsSubmint.addEventListener("click" , RestaurantsSubmintBtn)
 
 async function RestaurantsSubmintBtn(){
+
+
 
     if(!RestaurantsName.value || !RestaurantsAddress.value || !RestaurantsEmail.value || !RestaurantsPhone.value){
         alert("Enter Input Fields")
         return
     }
 
-    const UserData = JSON.parse(localStorage.getItem("user"))
-    console.log(UserData)
-    const userUID = UserData.UserUID
+    RestaurantsSubmint.innerHTML = `<div class="spinner-border text-light" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>`
+
+    const userUID = JSON.parse(localStorage.getItem("userUID"))
+
     console.log(userUID)
     const RName = RestaurantsName.value
     const RPhone = RestaurantsPhone.value
@@ -57,6 +61,7 @@ async function RestaurantsSubmintBtn(){
     } else {
         // docSnap.data() will be undefined in this case
         console.log("No such document!");
+        RestaurantsSubmint.innerHTML = "Submit"
     }
 
 

@@ -1,6 +1,6 @@
 import { db, analytics, auth, app } from "../firebase.js"
 import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
-import { getAuth,signOut, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import { getAuth, signOut, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import { getStorage, deleteObject, ref, uploadBytes, uploadString, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js";
 
 
@@ -9,6 +9,7 @@ const VendorData = document.getElementById("VendorData")
 const ShowCustomer = document.getElementById("ShowCustomer")
 const ShowVendor = document.getElementById("ShowVendor")
 const PageUID = document.getElementById("PageUID")
+const LogoutBtn = document.getElementById("LogoutBtn")
 
 const UserData = JSON.parse(localStorage.getItem("user"))
 // console.log(UserData)
@@ -25,9 +26,19 @@ window.addEventListener("load", function () {
 })
 
 
+LogoutBtn.addEventListener("click" ,Logout)
 
+function Logout(){
 
+    signOut(auth).then(() => {
+        localStorage.clear()
+        window.location.replace("../index.html")
+        // Sign-out successful.
+      }).catch((error) => {
+        // An error happened.
+      });
 
+}
 
 ShowCustomer.addEventListener("click", ShowCustomerData)
 window.addEventListener("load", ShowCustomerData)
@@ -50,17 +61,17 @@ async function ShowCustomerData() {
             const userUID = Buydata.UserUID
             const userImage = Buydata.ProfileImageURL
 
-            if(Buydata.UserType == "Customer"){
+            if (Buydata.UserType == "Customer") {
                 CustomerData.innerHTML += `<tr>
                 <th scope="row">${usernumber}.&nbsp&nbsp<img width="50px" height="50px" style="border-radius: 100%; border: 2px solid black;" src="${userImage}" alt=""></th>
                 <td>${userName}</td>
                 <td>${userEmail}</td>
                 <td>${userUID}</td>
                 </tr>`
-    
+
                 CustomerData.value = 1
             }
-            
+
             // doc.data() is never undefined for query doc snapshots
             //   console.log(doc.id, " => ", doc.data());
         });
@@ -83,8 +94,8 @@ async function ShowVendorData() {
             const userStatus = Vendata.Status
             const userImage = Vendata.ProfileImageURL
             const userUID = Vendata.UserUID
-console.log(userStatus)
-            if(Vendata.UserType == "Vendor"){
+            // console.log(userStatus)
+            if (Vendata.UserType == "Vendor") {
                 VendorData.innerHTML += `<tr>
                 <th scope="row">${usernumber}.&nbsp&nbsp<img width="50px" height="50px" style="border-radius: 100%; border: 2px solid black;" src="${userImage}" alt=""></th>
                 <td>${userName}</td>
@@ -95,12 +106,12 @@ console.log(userStatus)
                   </div>` : `<div class="form-check form-switch">
                   <input class="form-check-input CheckBtn"  onchange={handleAccountActivation(this)} type="checkbox" id="flexSwitchCheckChecked" >
                 </div>`
-                        }</td>
+                    }</td>
                      </tr>`
-                    VendorData.value = 1
-                    usernumber++
+                VendorData.value = 1
+                usernumber++
             }
-            
+
 
             // doc.data() is never undefined for query doc snapshots
             //   console.log(doc.id, " => ", doc.data());
@@ -125,12 +136,12 @@ async function handleAccountActivation(e) {
         const venderData = docSnap.data()
         console.log(venderData)
 
-        if(venderData.Status == false ){
+        if (venderData.Status == false) {
             venderData.Status = true
 
             await updateDoc(docRef, venderData);
             window.location.reload()
-        }else{
+        } else {
             venderData.Status = false
             await updateDoc(docRef, venderData);
             window.location.reload()
