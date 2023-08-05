@@ -257,6 +257,43 @@ body {
 a:focus{
    color: white !important;
 }
+
+.btn-group{
+    width: 200px;
+    display: flex;
+    margin: 0px auto;
+}
+
+/* ----------------------------Admin Style------------------------ */
+#CustomerData tr td , #VendorData tr td{
+    padding: 20px;
+    padding-left: 0px;
+    align-items: center !important;
+    
+}
+
+.CheckBtn{
+    /* background-color: rgb(0, 0, 0) !important; */
+    border: 2px solid black !important  ;
+    color: rgb(0, 0, 0) !important;
+}
+.OnCheckBtn{
+    background-color: rgb(0, 0, 0) !important;
+    border: 2px solid black !important  ;
+    color: rgb(0, 0, 0) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------------FOOTER------------------  */
 footer {
     background-color: black;
