@@ -264,6 +264,14 @@ a:focus{
     margin: 0px auto;
 }
 
+/* -----------------------Index Page--------------  */
+#indexProductDiv{
+    justify-content: center;
+    
+
+
+}
+
 /* -------------------------------Customer Style------------------ */
 .CustomerDiv{
     display: flex;
