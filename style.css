@@ -247,7 +247,7 @@ body {
     display: none;
 }
 
-.ProfileImageDiv img {
+#ProfileImage {
     width: 200px;
     height: 200px;
     border-radius: 200px;
@@ -262,6 +262,12 @@ a:focus{
     width: 200px;
     display: flex;
     margin: 0px auto;
+}
+
+/* -------------------------------Customer Style------------------ */
+.CustomerDiv{
+    display: flex;
+    flex-direction: column;
 }
 
 /* ----------------------------Admin Style------------------------ */

@@ -1,47 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
 
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg Theme">
-        <div class="container-fluid">
-            
-          <a class="navbar-brand text-color fs-3 fw-bold" href="#">Food App</a>
-          <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-5">
-              <li class="nav-item ms-lg-4 ">
-                <a class="nav-link text-color" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item ms-lg-1">
-                <a class="nav-link text-color" href="#">About</a>
-              </li>
-              <li class="nav-item ms-lg-1">
-                <a class="nav-link text-color" href="#">Contact</a>
-              </li>
-              <li class="nav-item ms-lg-1">
-                <a class="nav-link text-color" href="#">Menu</a>
-              </li>
-              <li class="nav-item ms-lg-1 loginLi">
-                <a class="nav-link text-color" href="#">Signup/Login</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn SearchBtn" type="submit">Search</button>
-            </form>
+  <nav class="navbar navbar-expand-lg Theme">
+    <div class="container-fluid">
+
+      <a class="navbar-brand text-color fs-3 fw-bold" href="#">Food App</a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-5">
+          <li class="nav-item ms-lg-4 ">
+            <a class="nav-link text-color" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link text-color" href="#">About</a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link text-color" href="#">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="nav-link text-color" href="../Menu/menu.html">Menu</a>
+          </li>
+        </ul>
+        <button class="btn SearchBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+  <div class="check container">
+    <div class="ProfileDiv  row">
+      <div class="col mb-5">
+        <div id="ChangingContentDiv">
+          <div class="ProfileInformation">
+            <h1>Profile Information</h1>
+            <hr>
+            <div class="CustomerDiv">
+              <img id="ProfileImage" class="" src="" alt=""><br>
+              <label class="fw-bold mt-2" for="">FULLNAME:</label>
+              <input id="Name" class="form-control" type="text" disabled>
+              <label class="fw-bold mt-2" for="">Phone No:</label>
+              <input id="UserPhoneNO" class="form-control" type="text" disabled>
+              <label class="fw-bold mt-2" for="">Email:</label>
+              <input id="UserEmail" class="form-control" type="text" disabled>
+            </div>
           </div>
         </div>
-      </nav>
-    
+
+      </div>
+    </div>
+  </div>
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script type="module" src="customer.js"></script>
+
 </html>
