@@ -42,16 +42,18 @@ function Logout(){
 
 ShowCustomer.addEventListener("click", ShowCustomerData)
 window.addEventListener("load", ShowCustomerData)
-var usernumber = 1
+
 
 
 async function ShowCustomerData() {
+    var usernumber = 1
     // PageUID.innerHTML = "UID"
     VendorData.style.display = "none"
     CustomerData.style.display = ""
     if (CustomerData.value == undefined) {
         const querySnapshot = await getDocs(collection(db, "users"));
         querySnapshot.forEach((doc) => {
+            
 
             console.log(doc.data())
             const Buydata = doc.data()
@@ -71,7 +73,7 @@ async function ShowCustomerData() {
 
                 CustomerData.value = 1
             }
-
+            usernumber++
             // doc.data() is never undefined for query doc snapshots
             //   console.log(doc.id, " => ", doc.data());
         });
@@ -82,6 +84,7 @@ async function ShowCustomerData() {
 
 ShowVendor.addEventListener("click", ShowVendorData)
 async function ShowVendorData() {
+    var usernumber = 1
     // PageUID.innerHTML = "Status"
     if (VendorData.value == undefined) {
         const querySnapshot = await getDocs(collection(db, "users"));
