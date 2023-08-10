@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
@@ -32,9 +34,9 @@
           <li class="nav-item ms-lg-1">
             <a class="nav-link text-color" href="./pages/contact.html">Contact</a>
           </li>
-          
+
           <li class="nav-item ms-lg-1">
-            <a class="nav-link text-color" href="./loginSignup/login.html">Signup/Login</a>
+            <a class="nav-link text-color" id="LoginSignupBtn" href="./loginSignup/login.html">Signup/Login</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -47,14 +49,33 @@
   <section class="">
     <div class="sectionImage">
       <div class="AboutContentDiv">
-      <h1 class="text-white">Welcome to "TastyBites" <br>Your Ultimate Food Experience!</h1>
-      <p class="text-white">Discover a world of delightful flavors, mouthwatering dishes, and culinary wonders with our revolutionary food app. Whether you're a seasoned foodie or just starting your gastronomic journey, TastyBites is here to satisfy your cravings and ignite your taste buds.</p>
-    </div>
+        <h1 class="text-white">Welcome to "TastyBites" <br>Your Ultimate Food Experience!</h1>
+        <p class="text-white">Discover a world of delightful flavors, mouthwatering dishes, and culinary wonders with
+          our revolutionary food app. Whether you're a seasoned foodie or just starting your gastronomic journey,
+          TastyBites is here to satisfy your cravings and ignite your taste buds.</p>
+      </div>
     </div>
     <h2 class="text-center text-black mt-3">Our Product's</h3>
       <hr>
       <div class="container">
         <div class="row row-cols-1 row-cols-md-2 g-4" id="indexProductDiv">
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">OOp's</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h3 id="ModalHeadline"></h3>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- <div class="card ms-4 me-4" style="width: 18rem;">
             <img src="..." height="200px" width="200px" class="card-img-top" alt="...">
@@ -71,19 +92,22 @@
     <div class="container text-center">
       <div class="SocialMedia">
         <li><a href="https://github.com/ayansheikh6600" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=100051745718713" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/ayansheikh9800/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100051745718713" target="_blank"><i
+              class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/ayansheikh9800/" target="_blank"><i
+              class="fa-brands fa-instagram"></i></a></li>
         <li><a href="https://twitter.com/AyanShe50246867" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/ayan-sheikh-6b2914242/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/ayan-sheikh-6b2914242/" target="_blank"><i
+              class="fa-brands fa-linkedin"></i></a></li>
       </div>
-    <div class="footerText">Copyright © 2023-2023 Food App All Rights Reserved</div>
+      <div class="footerText">Copyright © 2023-2023 Food App All Rights Reserved</div>
     </div>
-    
+
   </footer>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script type="module" src="index.js"></script>
+<script type="module" src="index.js"></script>
 
 </html>

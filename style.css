@@ -45,6 +45,11 @@
 #SignupBtn {
     cursor: pointer;
 }
+nav{
+    position: sticky !important;
+    top: 0px;
+    z-index: 1;
+}
 
 /* ---------------------------------HOME PAGE------------- */
 .sectionImage {
@@ -211,13 +216,15 @@ body {
 }
 
 .sellerNavbarMain {
-    border-bottom: 1px dashed white;
+    border-bottom: 1px solid white;
 }
 
 .ProfileDiv {
     width: 100%;
     height: 100%;
     margin-top: 20px;
+    margin-bottom: 20px;
+
     border: 2px solid black;
 
 }
@@ -262,6 +269,12 @@ a:focus{
     width: 200px;
     display: flex;
     margin: 0px auto;
+}
+
+#ListedProducts{
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 /* -----------------------Index Page--------------  */
