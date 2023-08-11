@@ -11,17 +11,31 @@ const LoginSignupBtn = document.getElementById("LoginSignupBtn")
 
 window.addEventListener("load", GetProduct)
 
-async function GetProduct(){
+async function GetProduct() {
   const UserData = JSON.parse(localStorage.getItem("user"))
-    const querySnapshot = await getDocs(collection(db, "Products"));
-    querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        // console.log(doc.id, " => ", doc.data());
-        const ProductData = doc.data()
-        // console.log(ProductData)
 
-        if(UserData == null){
-          const card =`<div class="card ms-4 me-4" style="width: 18rem;">
+  if(UserData != null){
+    if (UserData.UserType == "Vendor") {
+    LoginSignupBtn.innerHTML = "Dashboard"
+    LoginSignupBtn.href = "./seller/seller.html"
+  } else if (UserData.UserType == "Admin") {
+    LoginSignupBtn.innerHTML = "Dashboard"
+    LoginSignupBtn.href = "./admin/admin.html"
+  } else if (UserData.UserType == "Customer") {
+    LoginSignupBtn.innerHTML = "Profile"
+    LoginSignupBtn.href = "./customer/customer.html"
+  }
+  }
+  
+  const querySnapshot = await getDocs(collection(db, "Products"));
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    // console.log(doc.id, " => ", doc.data());
+    const ProductData = doc.data()
+    // console.log(ProductData)
+
+    if (UserData == null) {
+      const card = `<div class="card ms-4 me-4" style="width: 18rem;">
           <img src="${ProductData.ProductImage}" height="200px" width="200px" class="mt-2 card-img-top" alt="...">
           <div class="card-body">
             <h5 id="ProductName" class="card-title">${ProductData.ProductName}</h5>
@@ -29,12 +43,10 @@ async function GetProduct(){
             <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="LoginFirst()" >Add to Card</a>
           </div>
         </div>`
-        indexProductDiv.innerHTML += card
-        }else if(UserData.UserType == "Customer"){
-          LoginSignupBtn.innerHTML = "Profile"
-          LoginSignupBtn.href = "./customer/customer.html"
+      indexProductDiv.innerHTML += card
+    } else if (UserData.UserType == "Customer") {
 
-          const card =`<div class="card ms-4 me-4" style="width: 18rem;">
+      const card = `<div class="card ms-4 me-4" style="width: 18rem;">
           <img src="${ProductData.ProductImage}" height="200px" width="200px" class="mt-2 card-img-top" alt="...">
           <div class="card-body">
             <h5 id="ProductName" class="card-title">${ProductData.ProductName}</h5>
@@ -42,16 +54,10 @@ async function GetProduct(){
             <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="AddCard()" >Add to Card</a>
           </div>
         </div>`
-        indexProductDiv.innerHTML += card
-        }else{
-          if(UserData.UserType == "Vendor"){
-            LoginSignupBtn.innerHTML = "Dashboard"
-          LoginSignupBtn.href = "./seller/seller.html"
-          }else if(UserData.UserType == "Admin"){
-            LoginSignupBtn.innerHTML = "Dashboard"
-          LoginSignupBtn.href = "./admin/admin.html"
-          }
-          const card =`<div class="card ms-4 me-4" style="width: 18rem;">
+      indexProductDiv.innerHTML += card
+    } else {
+
+      const card = `<div class="card ms-4 me-4" style="width: 18rem;">
           <img src="${ProductData.ProductImage}" height="200px" width="200px" class="mt-2 card-img-top" alt="...">
           <div class="card-body">
             <h5 id="ProductName" class="card-title">${ProductData.ProductName}</h5>
@@ -59,9 +65,9 @@ async function GetProduct(){
             <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="AcountNot()" >Add to Card</a>
           </div>
         </div>`
-        indexProductDiv.innerHTML += card
-        }
-    });
+      indexProductDiv.innerHTML += card
+    }
+  });
 
 
 
@@ -70,19 +76,19 @@ async function GetProduct(){
 
 }
 
-function LoginFirst(){
-const ModalHeadline = document.getElementById("ModalHeadline")
-ModalHeadline.innerHTML = "Please Login First"
+function LoginFirst() {
+  const ModalHeadline = document.getElementById("ModalHeadline")
+  ModalHeadline.innerHTML = "Please Login First"
 }
 
 
 
-function AcountNot(){
+function AcountNot() {
   const ModalHeadline = document.getElementById("ModalHeadline")
   ModalHeadline.innerHTML = "Your Account Are Not Eligible for this"
 }
 
-function AddCard(){
+function AddCard() {
   console.log("hiy")
   const ModalHeadline = document.getElementById("ModalHeadline")
   ModalHeadline.innerHTML = "Order Successfully Placed"
@@ -93,7 +99,7 @@ function AddCard(){
 
 
 
- 
+
 window.AcountNot = AcountNot
 window.AddCard = AddCard
 window.LoginFirst = LoginFirst
