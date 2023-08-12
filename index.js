@@ -32,7 +32,8 @@ async function GetProduct() {
     // doc.data() is never undefined for query doc snapshots
     // console.log(doc.id, " => ", doc.data());
     const ProductData = doc.data()
-    // console.log(ProductData)
+    const id = doc.id
+    console.log(ProductData)
 
     if (UserData == null) {
       const card = `<div class="card ms-4 me-4" style="width: 18rem;">
@@ -51,7 +52,7 @@ async function GetProduct() {
           <div class="card-body">
             <h5 id="ProductName" class="card-title">${ProductData.ProductName}</h5>
             <p  id=""class="card-text">PKR: <span class="fw-bold" id="ProductPrice">${ProductData.ProductPrice}</span><br>Restaurant: <span class="fw-bold" id="RestaurantName">${ProductData.RestaurantName}</span></p>
-            <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="AddCard()" >Add to Card</a>
+            <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="AddCard('${id}')" >Add to Card</a>
           </div>
         </div>`
       indexProductDiv.innerHTML += card
@@ -88,8 +89,9 @@ function AcountNot() {
   ModalHeadline.innerHTML = "Your Account Are Not Eligible for this"
 }
 
-function AddCard() {
-  console.log("hiy")
+function AddCard(id) {
+  console.log("id" , id)
+return
   const ModalHeadline = document.getElementById("ModalHeadline")
   ModalHeadline.innerHTML = "Order Successfully Placed"
 }
